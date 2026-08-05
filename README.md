@@ -2,9 +2,10 @@
 
 AI-powered skills for building production-grade data pipelines, schemas, and systems—with Claude Code, Cursor, or any agent that supports Agent Skills.
 
+[![CI](https://github.com/Yuuzulight/db-artisan/actions/workflows/ci.yml/badge.svg)](https://github.com/Yuuzulight/db-artisan/actions/workflows/ci.yml)
 [![Agent Skills compatible](https://img.shields.io/badge/Agent%20Skills-compatible-success)](https://github.com/vercel-labs/agent-skills)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/Yuuzulight/data-engineering-skills?style=social)](https://github.com/Yuuzulight/data-engineering-skills)
+[![GitHub Stars](https://img.shields.io/github/stars/Yuuzulight/db-artisan?style=social)](https://github.com/Yuuzulight/db-artisan)
 
 ## The Problem
 
