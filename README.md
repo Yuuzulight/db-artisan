@@ -17,7 +17,7 @@ When you ask Claude Code to generate a database schema or data pipeline, it crea
 - No lineage or observability patterns
 - Designs that work at 1GB but break at 1TB
 
-**Data Engineering Skills** teaches AI agents how to think like data engineers: designing for scale, reliability, and operations from day one.
+**Data Artisan** teaches AI agents how to think like data engineers: designing for scale, reliability, and operations from day one.
 
 ## What You Get
 
@@ -42,7 +42,7 @@ Each skill is a portable SKILL.md file that works with:
 ### Install with CLI
 
 ```bash
-npx skills add https://github.com/Yuuzulight/data-engineering-skills --skill "data-schema-design"
+npx skills add https://github.com/Yuuzulight/db-artisan --skill "data-schema-design"
 ```
 
 ### Or Copy-Paste
@@ -91,7 +91,7 @@ ALTER TABLE users ADD CONSTRAINT chk_email_format
 ## Repository Structure
 
 ```
-data-engineering-skills/
+db-artisan/
 ├── README.md                           # This file
 ├── LICENSE                             # MIT
 ├── CHANGELOG.md                        # Version history
@@ -135,8 +135,8 @@ data-engineering-skills/
 
 ## Getting Help
 
-- **Have a question?** Open a [GitHub Discussion](https://github.com/Yuuzulight/data-engineering-skills/discussions)
-- **Found a bug or gap?** [Open an Issue](https://github.com/Yuuzulight/data-engineering-skills/issues)
+- **Have a question?** Open a [GitHub Discussion](https://github.com/Yuuzulight/db-artisan/discussions)
+- **Found a bug or gap?** [Open an Issue](https://github.com/Yuuzulight/db-artisan/issues)
 - **Want to contribute?** See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Support Development

@@ -1,4 +1,4 @@
-# Contributing to Data Engineering Skills
+# Contributing to Data Artisan
 
 Thanks for interest in contributing! Here's how to help.
 
