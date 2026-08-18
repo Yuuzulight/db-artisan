@@ -17,7 +17,7 @@ When you ask Claude Code to generate a database schema or data pipeline, it crea
 - No lineage or observability patterns
 - Designs that work at 1GB but break at 1TB
 
-**Data Engineering Skills** teaches AI agents how to think like data engineers: designing for scale, reliability, and operations from day one.
+**Data Artisan** teaches AI agents how to think like data engineers: designing for scale, reliability, and operations from day one.
 
 ## What You Get
 
@@ -32,17 +32,15 @@ Each skill is a portable SKILL.md file that works with:
 | Skill | Install Name | What It Does |
 |-------|--------------|--------------|
 | **Schema Design Fundamentals** | `data-schema-design` | Generate production-grade SQL schemas with indexing, partitioning, and data type strategies for Postgres/Snowflake/BigQuery |
-| **ETL Pattern Library** | `data-etl-patterns` | Common ETL patterns: SCD Type 2, slowly changing facts, incremental loads, full refreshes with idempotency |
-| **Data Quality Framework** | `data-quality-checks` | Generate dbt tests, Great Expectations, or SQL validation rules for completeness, uniqueness, referential integrity |
-| **Local AI Data Stack** | `local-ai-data` | Optimize Claude Skills for local LLMs with proper context windows, fallback strategies, and model selection |
-| **DuckDB & Analytics** | `duckdb-analytics` | Modern analytics patterns: columnar design, query optimization, analytical SQL best practices |
+
+One skill so far. The rest are on the [roadmap](#roadmap).
 
 ## Quick Start
 
 ### Install with CLI
 
 ```bash
-npx skills add https://github.com/Yuuzulight/data-engineering-skills --skill "data-schema-design"
+npx skills add https://github.com/Yuuzulight/db-artisan --skill "data-schema-design"
 ```
 
 ### Or Copy-Paste
@@ -91,40 +89,26 @@ ALTER TABLE users ADD CONSTRAINT chk_email_format
 ## Repository Structure
 
 ```
-data-engineering-skills/
+db-artisan/
 ├── README.md                           # This file
 ├── LICENSE                             # MIT
 ├── CHANGELOG.md                        # Version history
+├── CONTRIBUTING.md                     # How to contribute
+├── .github/
+│   └── workflows/
+│       └── ci.yml                      # Markdown lint on push and PR
 ├── skills/
-│   ├── data-schema-design/
-│   │   └── SKILL.md                    # Main skill file
-│   ├── data-etl-patterns/
-│   │   └── SKILL.md
-│   ├── data-quality-checks/
-│   │   └── SKILL.md
-│   ├── local-ai-data/
-│   │   └── SKILL.md
-│   └── duckdb-analytics/
-│       └── SKILL.md
-├── examples/
-│   ├── schema-design-examples.md       # Real-world schema examples
-│   ├── etl-patterns-examples.md        # ETL pattern implementations
-│   └── data-quality-examples.md        # Quality check examples
-├── research/
-│   └── data-engineering-principles.md  # Background reading
-└── scripts/
-    └── skill.sh                        # CLI helper script
+│   └── data-schema-design/
+│       └── SKILL.md                    # The skill file
+└── examples/
+    └── schema-design-examples.md       # Real-world schema examples
 ```
 
-## Why These Skills
+## Why This Skill
 
-### Real Problems, Real Solutions
+Most AI-generated schemas are under-indexed. They compile, they pass a smoke test, and then they buckle at scale—no partition strategy, no constraints catching bad data on the way in, and indexes that don't match the queries anyone actually runs.
 
-- **Schema Design**: Most AI-generated schemas are under-indexed. We fix that.
-- **ETL Patterns**: Incremental loads and slowly-changing dimensions are complex. We teach the patterns.
-- **Data Quality**: 80% of data issues come from quality problems upstream. We make them systemic.
-- **Local AI Data**: As AI moves local, data stacks need to optimize for resource constraints. We show how.
-- **Analytics**: Modern analytics (DuckDB, Trino, etc.) require different thinking than OLTP. We bridge the gap.
+Schema Design Fundamentals front-loads the decisions a data engineer would make anyway, so the first draft lands closer to something you'd be willing to ship.
 
 ## Who Should Use This
 
@@ -135,8 +119,8 @@ data-engineering-skills/
 
 ## Getting Help
 
-- **Have a question?** Open a [GitHub Discussion](https://github.com/Yuuzulight/data-engineering-skills/discussions)
-- **Found a bug or gap?** [Open an Issue](https://github.com/Yuuzulight/data-engineering-skills/issues)
+- **Have a question?** Open a [GitHub Discussion](https://github.com/Yuuzulight/db-artisan/discussions)
+- **Found a bug or gap?** [Open an Issue](https://github.com/Yuuzulight/db-artisan/issues)
 - **Want to contribute?** See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Support Development
@@ -157,6 +141,10 @@ Sponsors get:
 
 ## Roadmap
 
+- [ ] **ETL Pattern Library** (`data-etl-patterns`) – SCD Type 2, slowly changing facts, incremental loads, idempotent full refreshes
+- [ ] **Data Quality Framework** (`data-quality-checks`) – dbt tests, Great Expectations, SQL validation for completeness, uniqueness, referential integrity
+- [ ] **DuckDB & Analytics** (`duckdb-analytics`) – columnar design, query optimization, analytical SQL best practices
+- [ ] **Local AI Data Stack** (`local-ai-data`) – context windows, fallback strategies, and model selection for local LLMs
 - [ ] **Kafka & Streaming Skills** – streaming data patterns, exactly-once semantics, backpressure handling
 - [ ] **dbt Advanced Patterns** – macro patterns, custom tests, performance optimization
 - [ ] **Data Governance** – PII masking, lineage tracking, access control patterns
